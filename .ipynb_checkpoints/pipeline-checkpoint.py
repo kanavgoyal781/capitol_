@@ -60,7 +60,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("pipeline.log", mode='w', encoding='utf-8'), # 'w' overwrites log each run
+        logging.FileHandler("output/pipeline.log", mode='w', encoding='utf-8'), # 'w' overwrites log each run
         logging.StreamHandler()
     ]
 )
@@ -204,32 +204,59 @@ class DataTransformer:
         return full_text.strip()
 
     def extract_title(self, article):
-        # Navigate to headlines -> basic
-        raw_title = article.get('headlines', {}).get('basic', '')
+        headlines = article.get("headlines")
+        if not isinstance(headlines, dict):
+            return ""
+        raw_title = headlines.get("basic", "")
         return self.clean_text(raw_title)
 
-    def extract_url_general(self, raw_doc):
+    def extract_url_general(self, raw_doc: dict) -> str:
         """
-        Dynamically builds the URL for ANY website found in the data.
+        Build a clean URL from the raw doc.
+    
+        Rules:
+        - If `website_url` is a relative path and `canonical_website` is present,
+          build: https://www.{canonical_website}.com{website_url}
+        - If `website_url` is already a full URL, return it as-is.
+        - Otherwise, if `canonical_url` is a full URL, use that.
+        - If nothing valid is found, return "" so the caller can treat it as missing.
         """
-        # 1. Get the path (e.g., "/news/article123")
-        relative_path = raw_doc.get('website_url', '')
-        
-        # 2. Get the site identifier directly from the data
-        site_id = raw_doc.get('canonical_website')
-        
-        # Safety check: If site_id is missing, return the relative path as-is
-        if not site_id:
+        raw_relative = raw_doc.get("website_url")
+        raw_canonical = raw_doc.get("canonical_url")
+        site_id = raw_doc.get("canonical_website")
+    
+        # Normalize strings safely
+        def norm(s: Any) -> str:
+            if not isinstance(s, str):
+                return ""
+            return s.strip()
+    
+        relative_path = norm(raw_relative)
+        canonical_url = norm(raw_canonical)
+    
+        # 1) If we have a site_id and a relative path starting with '/', build absolute URL
+        if isinstance(site_id, str) and site_id.strip():
+            site_id = site_id.strip()
+            base_domain = f"https://www.{site_id}.com"
+    
+            if relative_path.startswith("/"):
+                return base_domain + relative_path
+    
+            # If website_url is already a full URL, just use it
+            if relative_path.startswith("http://") or relative_path.startswith("https://"):
+                return relative_path
+    
+        # 2) No usable site_id or no relative path.
+        #    Accept website_url if it looks like a full URL.
+        if relative_path.startswith("http://") or relative_path.startswith("https://"):
             return relative_path
-            
-        # 3. Construct the domain dynamically
-        base_domain = f"https://www.{site_id}.com"
-        
-        # 4. Combine them if it's a relative path
-        if relative_path.startswith('/'):
-            return base_domain + relative_path
-        
-        return relative_path
+    
+        # 3) Fallback: canonical_url, but ONLY if it looks like a proper URL
+        if canonical_url.startswith("http://") or canonical_url.startswith("https://"):
+            return canonical_url
+    
+        # 4) Nothing valid → treat as missing.
+        return ""
 
     def extract_id(self, raw_doc):
         """
@@ -396,6 +423,14 @@ class DataTransformer:
         Orchestrates transformation with comprehensive logging for ALL fields.
         Returns: (Processed Document OR None, Report Dictionary)
         """
+        if not isinstance(raw_doc, dict):
+            logger.error(f"❌ SKIPPING: raw_doc is not a dict (got {type(raw_doc).__name__})")
+            return None, {
+                "id": "UNKNOWN_ID",
+                "status": "SKIPPED",
+                "reason": "Invalid document type (expected object)"
+            }
+
         doc_id = raw_doc.get('_id', 'UNKNOWN_ID')
         report: Dict[str, Any] = {"id": doc_id, "status": "SKIPPED", "reason": "Unknown"}
 
@@ -533,11 +568,11 @@ class DataTransformer:
             logger.error(f"   💥 CRITICAL ERROR on {doc_id}: {e}")
             report["reason"] = f"Crash: {str(e)}"
             return None, report
-dead_letter_path = "dead_letter_queue.jsonl"
+dead_letter_path = "output/dead_letter_queue.jsonl"
 # --- MAIN EXECUTION ---
 if __name__ == "__main__":
     try:
-        with open("raw_customer_api.json", "r", encoding="utf-8") as f:
+        with open("data/raw_customer_api.json", "r", encoding="utf-8") as f:
             raw_data = json.load(f)
     except FileNotFoundError:
         print("❌ Error: 'raw_customer_api.json' not found.")
@@ -582,11 +617,11 @@ if __name__ == "__main__":
                 }
                 dl.write(json.dumps(record, ensure_ascii=False) + "\n")
     # Save Valid Output (JSON)
-    with open("processed_output_updated_2.json", "w", encoding="utf-8") as f:
+    with open("output/processed_output_updated_2.json", "w", encoding="utf-8") as f:
         json.dump(valid_docs, f, indent=2, ensure_ascii=False)
 
     # Save Summary Report (CSV)
-    with open("ingestion_report.csv", "w", newline="", encoding="utf-8") as f:
+    with open("output/ingestion_report.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["id", "status", "reason"])
         writer.writeheader()
         writer.writerows(report_data)

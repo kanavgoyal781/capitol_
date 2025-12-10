@@ -1,0 +1,4 @@
+# file: /opt/anaconda3/bin/pytest
+# hypothesis_version: 6.148.7
+
+['__main__']

@@ -1,10 +1,13 @@
 import logging
+import os
+import json
 from typing import List, Dict, Any
+
 from fastapi import FastAPI, HTTPException
 
 # --- IMPORTS ---
-# Matches the filenames currently on your Render instance
-from pipeline import DataTransformer
+# Ensure pipeline.py exists and exports DataTransformer and dead_letter_path
+from pipeline import DataTransformer, dead_letter_path
 from embedding_v3 import EmbeddingModel
 from vectordb_v3 import VectorDatabase
 
@@ -15,65 +18,108 @@ logger = logging.getLogger("CapitolPipeline")
 app = FastAPI(title="Modular RAG Pipeline (Stateless)")
 COLLECTION_NAME = "capitol_assessment"
 
-# --- ROOT ENDPOINT ---
+
 @app.get("/")
 def read_root():
     return {"status": "System is live", "docs_url": "/docs"}
 
+
 # ==============================================================================
-# 1. TRANSFORM ENDPOINT
-# Returns: List[Dict] (The cleaned documents, exactly as they would be in the file)
+# 1. TRANSFORM ENDPOINT (Robust)
 # ==============================================================================
 @app.post("/pipeline/transform", response_model=List[Dict[str, Any]])
-def api_transform_data(raw_data: List[Dict[str, Any]]):
+def api_transform_data(raw_data: List[Any]):  # 1. Use List[Any] to accept mixed types
     try:
         transformer = DataTransformer()
-        valid_docs = []
+        valid_docs: List[Dict[str, Any]] = []
         seen_ids = set()
 
-        logger.info(f"Transforming {len(raw_data)} documents...")
+        # 2. Basic Type Check: Is the whole body a list?
+        if not isinstance(raw_data, list):
+            raise HTTPException(status_code=400, detail="Body must be a JSON array")
 
-        for doc in raw_data:
-            doc_id = doc.get('_id')
-            if doc_id in seen_ids: 
+        logger.info(f"Transforming {len(raw_data)} items...")
+
+        # Ensure dead-letter directory exists
+        output_dir = os.path.dirname(dead_letter_path)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
+
+        for idx, doc in enumerate(raw_data):
+            # 3. PER-ITEM GUARD: Skip garbage (strings, ints, nulls)
+            if not isinstance(doc, dict):
+                logger.warning(f"⚠️ Skipping non-dict item at index {idx}: {doc}")
+                
+                # Optional: Write garbage to dead letter queue
+                with open(dead_letter_path, "a", encoding="utf-8") as dl:
+                    dl.write(json.dumps({"id": f"INVALID_TYPE_{idx}", "error": "Not a dictionary", "raw": doc}) + "\n")
                 continue
-            if doc_id: 
+
+            # ✅ Safe to use dictionary methods now
+            doc_id = doc.get('_id')
+
+            # Deduplicate
+            if doc_id in seen_ids:
+                continue
+            if doc_id:
                 seen_ids.add(doc_id)
 
-            result, _ = transformer.process_document(doc)
+            # Process
+            result, report = transformer.process_document(doc)
+
             if result:
                 valid_docs.append(result)
+            else:
+                # Log failed validations
+                with open(dead_letter_path, "a", encoding="utf-8") as dl:
+                    record = {
+                        "id": doc_id or f"UNKNOWN_{idx}",
+                        "reason": report.get("reason", "unknown"),
+                        "raw_doc": doc,
+                    }
+                    dl.write(json.dumps(record, ensure_ascii=False) + "\n")
 
-        # RETURN RAW LIST (No wrapper)
         return valid_docs
 
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"Transformation failed: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
 # ==============================================================================
-# 2. EMBED ENDPOINT
-# Returns: List[Dict] (The documents with 'vector' added)
+# 2. EMBED ENDPOINT (Robust)
 # ==============================================================================
 @app.post("/pipeline/embed", response_model=List[Dict[str, Any]])
-def api_embed_documents(processed_docs: List[Dict[str, Any]]):
+def api_embed_documents(processed_docs: List[Any]): # 1. Use List[Any]
     try:
+        if not isinstance(processed_docs, list):
+             raise HTTPException(status_code=400, detail="Input must be a list")
+
         embedder = EmbeddingModel()
         embedded_docs = []
 
-        logger.info(f"Embedding {len(processed_docs)} documents...")
+        logger.info(f"Embedding {len(processed_docs)} items...")
 
-        for doc in processed_docs:
+        for idx, doc in enumerate(processed_docs):
+            # 2. Guard against garbage
+            if not isinstance(doc, dict):
+                logger.warning(f"Skipping non-dict item at index {idx} in embed endpoint")
+                continue
+
             text = doc.get("text", "")
             if not text:
                 continue
-            
-            vector = embedder.generate_embedding(text)
-            doc["vector"] = vector
-            embedded_docs.append(doc)
 
-        # RETURN RAW LIST (No wrapper)
+            try:
+                vector = embedder.generate_embedding(text)
+                doc["vector"] = vector
+                embedded_docs.append(doc)
+            except Exception as e:
+                logger.error(f"Failed to embed doc index {idx}: {e}")
+                continue
+
         return embedded_docs
 
     except Exception as e:
@@ -82,25 +128,30 @@ def api_embed_documents(processed_docs: List[Dict[str, Any]]):
 
 
 # ==============================================================================
-# 3. INDEX ENDPOINT
-# Returns: Minimal status (since indexing has no data output)
+# 3. INDEX ENDPOINT (Robust)
 # ==============================================================================
 @app.post("/pipeline/index")
-def api_index_documents(embedded_docs: List[Dict[str, Any]]):
+def api_index_documents(embedded_docs: List[Any]): # 1. Use List[Any]
     try:
-        if not embedded_docs:
-            return {"indexed": 0}
+        if not isinstance(embedded_docs, list):
+             raise HTTPException(status_code=400, detail="Input must be a list")
+
+        # 2. Filter valid docs immediately
+        valid_inputs = [d for d in embedded_docs if isinstance(d, dict) and d.get("vector")]
+
+        if not valid_inputs:
+            return {"indexed": 0, "message": "No valid documents with vectors found"}
 
         vector_db = VectorDatabase(collection_name=COLLECTION_NAME)
-        
-        # Check vector size from first doc
-        sample_vector = embedded_docs[0].get("vector")
-        vector_size = len(sample_vector) if sample_vector else 384
-        
-        vector_db.get_or_create_collection(vector_size=vector_size)
-        vector_db.upsert_documents(embedded_docs)
 
-        return {"indexed": len(embedded_docs)}
+        # Check vector size from first valid doc
+        sample_vector = valid_inputs[0].get("vector")
+        vector_size = len(sample_vector) if sample_vector else 384
+
+        vector_db.get_or_create_collection(vector_size=vector_size)
+        vector_db.upsert_documents(valid_inputs)
+
+        return {"indexed": len(valid_inputs)}
 
     except Exception as e:
         logger.error(f"Indexing failed: {e}")
@@ -108,38 +159,66 @@ def api_index_documents(embedded_docs: List[Dict[str, Any]]):
 
 
 # ==============================================================================
-# 4. FULL PIPELINE
-# Returns: Minimal status summary
+# 4. FULL PIPELINE (Robust)
 # ==============================================================================
 @app.post("/pipeline/run_full")
-def api_run_full_pipeline(raw_data: List[Dict[str, Any]]):
+def api_run_full_pipeline(raw_data: List[Any]): # 1. Use List[Any]
     try:
-        # 1. Transform
+        # --- STAGE 1: TRANSFORM ---
         transformer = DataTransformer()
         clean_docs = []
         seen_ids = set()
-        for doc in raw_data:
+
+        if not isinstance(raw_data, list):
+             raise HTTPException(status_code=400, detail="Input must be a list")
+
+        # Ensure dead-letter directory exists
+        output_dir = os.path.dirname(dead_letter_path)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
+
+        for idx, doc in enumerate(raw_data):
+            # 2. Guard against garbage
+            if not isinstance(doc, dict):
+                logger.warning(f"RunFull: Skipping non-dict item at index {idx}")
+                continue
+
             doc_id = doc.get('_id')
             if doc_id in seen_ids: continue
             if doc_id: seen_ids.add(doc_id)
-            
-            res, _ = transformer.process_document(doc)
-            if res: clean_docs.append(res)
-        
+
+            res, report = transformer.process_document(doc)
+            if res:
+                clean_docs.append(res)
+            else:
+                # Log failures
+                with open(dead_letter_path, "a", encoding="utf-8") as dl:
+                    record = {
+                        "id": doc_id or f"UNKNOWN_{idx}",
+                        "reason": report.get("reason", "unknown"),
+                        "raw_doc": doc,
+                    }
+                    dl.write(json.dumps(record, ensure_ascii=False) + "\n")
+
         if not clean_docs:
             return {"processed": 0, "indexed": 0}
 
-        # 2. Embed
+        # --- STAGE 2: EMBED ---
         embedder = EmbeddingModel()
         embedded_docs = []
         for doc in clean_docs:
-            doc["vector"] = embedder.generate_embedding(doc.get("text", ""))
-            embedded_docs.append(doc)
+            try:
+                doc["vector"] = embedder.generate_embedding(doc.get("text", ""))
+                embedded_docs.append(doc)
+            except Exception as e:
+                logger.error(f"RunFull: Embedding failed for doc {doc.get('external_id')}: {e}")
+                continue
 
-        # 3. Index
-        vector_db = VectorDatabase(collection_name=COLLECTION_NAME)
-        vector_db.get_or_create_collection(vector_size=len(embedded_docs[0]["vector"]))
-        vector_db.upsert_documents(embedded_docs)
+        # --- STAGE 3: INDEX ---
+        if embedded_docs:
+            vector_db = VectorDatabase(collection_name=COLLECTION_NAME)
+            vector_db.get_or_create_collection(vector_size=len(embedded_docs[0]["vector"]))
+            vector_db.upsert_documents(embedded_docs)
 
         return {
             "processed": len(clean_docs),
@@ -152,17 +231,17 @@ def api_run_full_pipeline(raw_data: List[Dict[str, Any]]):
 
 
 # ==============================================================================
-# SEARCH ENDPOINT
+# SEARCH ENDPOINT (Safe)
 # ==============================================================================
 @app.get("/search")
 def api_search(query: str, k: int = 3):
     try:
         embedder = EmbeddingModel()
         query_vector = embedder.generate_embedding(query)
-        
+
         vector_db = VectorDatabase(collection_name=COLLECTION_NAME)
         results = vector_db.search(query_vector, limit=k)
-        
+
         return results
     except Exception as e:
         logger.error(f"Search failed: {e}")
@@ -172,3 +251,233 @@ def api_search(query: str, k: int = 3):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+# import logging
+# from typing import List, Dict, Any
+# from fastapi import FastAPI, HTTPException
+# import os
+# # --- IMPORTS ---
+# # Matches the filenames currently on your Render instance
+# from pipeline import DataTransformer, dead_letter_path
+# from embedding_v3 import EmbeddingModel
+# from vectordb_v3 import VectorDatabase
+# import json
+
+# # --- CONFIG & LOGGING ---
+# logging.basicConfig(level=logging.INFO)
+# logger = logging.getLogger("CapitolPipeline")
+
+# app = FastAPI(title="Modular RAG Pipeline (Stateless)")
+# COLLECTION_NAME = "capitol_assessment"
+
+# # --- ROOT ENDPOINT ---
+# @app.get("/")
+# def read_root():
+#     return {"status": "System is live", "docs_url": "/docs"}
+
+# # ==============================================================================
+# # 1. TRANSFORM ENDPOINT
+# # Returns: List[Dict] (The cleaned documents, exactly as they would be in the file)
+# # ==============================================================================
+# from pipeline import DataTransformer, dead_letter_path  # re-use same path
+
+# @app.post("/pipeline/transform", response_model=List[Dict[str, Any]])
+# def api_transform_data(raw_data: List[Any]):  # <--- CHANGED to List[Any] to allow "garbage" in
+#     try:
+#         transformer = DataTransformer()
+#         valid_docs: List[Dict[str, Any]] = []
+#         seen_ids = set()
+
+#         # 🔒 1. Ensure the body is actually a list
+#         if not isinstance(raw_data, list):
+#             raise HTTPException(
+#                 status_code=400,
+#                 detail="Body must be a JSON array"
+#             )
+
+#         logger.info(f"Transforming {len(raw_data)} items...")
+
+#         # 🔒 2. Ensure dead-letter directory exists
+#         output_dir = os.path.dirname(dead_letter_path)
+#         if output_dir:
+#             os.makedirs(output_dir, exist_ok=True)
+
+#         for idx, doc in enumerate(raw_data):
+#             # 🔒 3. Per-item Type Guard (The Bouncer)
+#             # This catches "meow", 123, null, etc. inside the list
+#             if not isinstance(doc, dict):
+#                 logger.warning(
+#                     f"⚠️ Skipping item at index {idx}: expected object, got {type(doc).__name__}"
+#                 )
+
+#                 record = {
+#                     "id": f"INVALID_FORMAT_{idx}",
+#                     "reason": f"Invalid input type: {type(doc).__name__}",
+#                     "raw_doc": doc,
+#                 }
+
+#                 # Write garbage to dead letter queue so you can debug it later
+#                 with open(dead_letter_path, "a", encoding="utf-8") as dl:
+#                     dl.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+#                 continue # Skip this bad item and move to the next
+
+#             # ✅ Now we know 'doc' is a dictionary, so .get() is safe
+#             doc_id = doc.get('_id')
+
+#             # Deduplicate
+#             if doc_id in seen_ids:
+#                 continue
+#             if doc_id:
+#                 seen_ids.add(doc_id)
+
+#             # Transform
+#             result, report = transformer.process_document(doc)
+
+#             if result:
+#                 valid_docs.append(result)
+#             else:
+#                 # Logic for documents that are dicts but failed validation (missing URL, etc)
+#                 record = {
+#                     "id": doc_id or "UNKNOWN_ID",
+#                     "reason": report.get("reason", "unknown"),
+#                     "raw_doc": doc,
+#                 }
+#                 with open(dead_letter_path, "a", encoding="utf-8") as dl:
+#                     dl.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+#         return valid_docs
+
+#     except HTTPException:
+#         raise
+#     except Exception as e:
+#         logger.error(f"Transformation failed: {e}")
+#         raise HTTPException(status_code=500, detail=str(e))
+
+#     except Exception as e:
+#         logger.error(f"Transformation failed: {e}")
+#         raise HTTPException(status_code=500, detail=str(e))
+
+
+# # ==============================================================================
+# # 2. EMBED ENDPOINT
+# # Returns: List[Dict] (The documents with 'vector' added)
+# # ==============================================================================
+# @app.post("/pipeline/embed", response_model=List[Dict[str, Any]])
+# def api_embed_documents(processed_docs: List[Dict[str, Any]]):
+#     try:
+#         embedder = EmbeddingModel()
+#         embedded_docs = []
+
+#         logger.info(f"Embedding {len(processed_docs)} documents...")
+
+#         for doc in processed_docs:
+#             text = doc.get("text", "")
+#             if not text:
+#                 continue
+            
+#             vector = embedder.generate_embedding(text)
+#             doc["vector"] = vector
+#             embedded_docs.append(doc)
+
+#         # RETURN RAW LIST (No wrapper)
+#         return embedded_docs
+
+#     except Exception as e:
+#         logger.error(f"Embedding failed: {e}")
+#         raise HTTPException(status_code=500, detail=str(e))
+
+
+# # ==============================================================================
+# # 3. INDEX ENDPOINT
+# # Returns: Minimal status (since indexing has no data output)
+# # ==============================================================================
+# @app.post("/pipeline/index")
+# def api_index_documents(embedded_docs: List[Dict[str, Any]]):
+#     try:
+#         if not embedded_docs:
+#             return {"indexed": 0}
+
+#         vector_db = VectorDatabase(collection_name=COLLECTION_NAME)
+        
+#         # Check vector size from first doc
+#         sample_vector = embedded_docs[0].get("vector")
+#         vector_size = len(sample_vector) if sample_vector else 384
+        
+#         vector_db.get_or_create_collection(vector_size=vector_size)
+#         vector_db.upsert_documents(embedded_docs)
+
+#         return {"indexed": len(embedded_docs)}
+
+#     except Exception as e:
+#         logger.error(f"Indexing failed: {e}")
+#         raise HTTPException(status_code=500, detail=str(e))
+
+
+# # ==============================================================================
+# # 4. FULL PIPELINE
+# # Returns: Minimal status summary
+# # ==============================================================================
+# @app.post("/pipeline/run_full")
+# def api_run_full_pipeline(raw_data: List[Dict[str, Any]]):
+#     try:
+#         # 1. Transform
+#         transformer = DataTransformer()
+#         clean_docs = []
+#         seen_ids = set()
+#         for doc in raw_data:
+#             doc_id = doc.get('_id')
+#             if doc_id in seen_ids: continue
+#             if doc_id: seen_ids.add(doc_id)
+            
+#             res, _ = transformer.process_document(doc)
+#             if res: clean_docs.append(res)
+        
+#         if not clean_docs:
+#             return {"processed": 0, "indexed": 0}
+
+#         # 2. Embed
+#         embedder = EmbeddingModel()
+#         embedded_docs = []
+#         for doc in clean_docs:
+#             doc["vector"] = embedder.generate_embedding(doc.get("text", ""))
+#             embedded_docs.append(doc)
+
+#         # 3. Index
+#         vector_db = VectorDatabase(collection_name=COLLECTION_NAME)
+#         vector_db.get_or_create_collection(vector_size=len(embedded_docs[0]["vector"]))
+#         vector_db.upsert_documents(embedded_docs)
+
+#         return {
+#             "processed": len(clean_docs),
+#             "indexed": len(embedded_docs)
+#         }
+
+#     except Exception as e:
+#         logger.error(f"Pipeline failed: {e}")
+#         raise HTTPException(status_code=500, detail=str(e))
+
+
+# # ==============================================================================
+# # SEARCH ENDPOINT
+# # ==============================================================================
+# @app.get("/search")
+# def api_search(query: str, k: int = 3):
+#     try:
+#         embedder = EmbeddingModel()
+#         query_vector = embedder.generate_embedding(query)
+        
+#         vector_db = VectorDatabase(collection_name=COLLECTION_NAME)
+#         results = vector_db.search(query_vector, limit=k)
+        
+#         return results
+#     except Exception as e:
+#         logger.error(f"Search failed: {e}")
+#         raise HTTPException(status_code=500, detail=str(e))
+
+
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+

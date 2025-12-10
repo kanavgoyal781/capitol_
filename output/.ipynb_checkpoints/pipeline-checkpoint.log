@@ -1,0 +1,650 @@
+2025-12-09 20:17:35,183 [INFO] 📄 Processing Document ID: JTCFBWNDENCPFFOZPDK44JJEQA
+2025-12-09 20:17:35,183 [INFO]    ✅ URL found: https://www.nj.com/advice/2025/07/miss-manners-i-tried-to-talk-to-her-but-she-said-id-rather-listen-to-what-the-men-are-talking-about.html
+2025-12-09 20:17:35,183 [INFO]    ✅ Text body found (1678 chars).
+2025-12-09 20:17:35,183 [INFO]    ☑️ Title found: 'Miss Manners: I tried to talk ...'
+2025-12-09 20:17:35,183 [INFO]    ☑️ Publish Date found: 2025-07-02T00:00:00Z
+2025-12-09 20:17:35,183 [INFO]    ☑️ First Publish Date found: 2025-07-02T00:00:00Z
+2025-12-09 20:17:35,183 [INFO]    ☑️ Datetime found: 2025-07-02T00:00:00Z
+2025-12-09 20:17:35,183 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,183 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,183 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,183 [INFO]    ⚪ Categories empty.
+2025-12-09 20:17:35,183 [INFO]    ☑️ Tags found: 3 items
+2025-12-09 20:17:35,183 [INFO]    🎉 Document JTCFBWNDENCPFFOZPDK44JJEQA successfully transformed.
+2025-12-09 20:17:35,183 [INFO] 📄 Processing Document ID: RF36ELX6ZRERBCJBMKGA7HBWBU
+2025-12-09 20:17:35,184 [INFO]    ✅ URL found: https://www.nj.com/shopping-deals/2025/07/forget-the-starbucks-line-amazon-can-get-you-a-ninja-slushi-to-diy-a-firework-frapp-ahead-of-july-4th.html
+2025-12-09 20:17:35,184 [INFO]    ✅ Text body found (1570 chars).
+2025-12-09 20:17:35,184 [INFO]    ☑️ Title found: 'Forget the Starbucks line — Am...'
+2025-12-09 20:17:35,184 [INFO]    ☑️ Publish Date found: 2025-09-24T18:22:22.915Z
+2025-12-09 20:17:35,184 [INFO]    ☑️ First Publish Date found: 2025-07-02T00:05:00Z
+2025-12-09 20:17:35,184 [INFO]    ☑️ Datetime found: 2025-09-24T18:22:22.915Z
+2025-12-09 20:17:35,185 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,185 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,185 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,185 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,185 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,185 [INFO]    🎉 Document RF36ELX6ZRERBCJBMKGA7HBWBU successfully transformed.
+2025-12-09 20:17:35,185 [INFO] 📄 Processing Document ID: L6GN3MLTDVHJRMDF7ZBIBDXQHM
+2025-12-09 20:17:35,185 [INFO]    ✅ URL found: https://www.nj.com/yankees/2025/07/yankees-lobby-for-rule-change-after-game-changing-catchers-interference-on-check-swing.html
+2025-12-09 20:17:35,187 [INFO]    ✅ Text body found (3935 chars).
+2025-12-09 20:17:35,187 [INFO]    ☑️ Title found: 'Yankees lobby for rule change ...'
+2025-12-09 20:17:35,187 [INFO]    ☑️ Publish Date found: 2025-07-02T15:15:37.918Z
+2025-12-09 20:17:35,187 [INFO]    ☑️ First Publish Date found: 2025-07-02T00:15:36.485Z
+2025-12-09 20:17:35,187 [INFO]    ☑️ Datetime found: 2025-07-02T15:15:37.918Z
+2025-12-09 20:17:35,187 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,187 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,187 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,187 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,187 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,187 [INFO]    🎉 Document L6GN3MLTDVHJRMDF7ZBIBDXQHM successfully transformed.
+2025-12-09 20:17:35,187 [INFO] 📄 Processing Document ID: TOIFMZ2VDZGTPOGTYYOL3FAJ5M
+2025-12-09 20:17:35,187 [INFO]    ✅ URL found: https://www.nj.com/weather-alerts/2025/07/flood-warning-in-place-for-monmouth-and-ocean-counties-until-1-a-m-wednesday-triggered-by-persistent.html
+2025-12-09 20:17:35,190 [INFO]    ✅ Text body found (4931 chars).
+2025-12-09 20:17:35,190 [INFO]    ☑️ Title found: 'Update: Monmouth and Ocean cou...'
+2025-12-09 20:17:35,190 [INFO]    ☑️ Publish Date found: 2025-07-02T06:58:30.481Z
+2025-12-09 20:17:35,190 [INFO]    ☑️ First Publish Date found: 2025-07-02T01:01:33.989Z
+2025-12-09 20:17:35,190 [INFO]    ☑️ Datetime found: 2025-07-02T06:58:30.481Z
+2025-12-09 20:17:35,190 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,190 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,190 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,190 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,190 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,190 [INFO]    🎉 Document TOIFMZ2VDZGTPOGTYYOL3FAJ5M successfully transformed.
+2025-12-09 20:17:35,190 [INFO] 📄 Processing Document ID: T5H7Z6KVBFF3NGBBIFVOSHZOVM
+2025-12-09 20:17:35,190 [INFO]    ✅ URL found: https://www.nj.com/advice/2025/07/todays-daily-horoscope-for-july-2-2025.html
+2025-12-09 20:17:35,192 [INFO]    ✅ Text body found (5146 chars).
+2025-12-09 20:17:35,192 [INFO]    ☑️ Title found: 'Today’s daily horoscope for Ju...'
+2025-12-09 20:17:35,192 [INFO]    ☑️ Publish Date found: 2025-07-02T04:01:00Z
+2025-12-09 20:17:35,192 [INFO]    ☑️ First Publish Date found: 2025-07-02T04:01:00Z
+2025-12-09 20:17:35,192 [INFO]    ☑️ Datetime found: 2025-07-02T04:01:00Z
+2025-12-09 20:17:35,192 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,192 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,192 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,192 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,192 [INFO]    ☑️ Tags found: 3 items
+2025-12-09 20:17:35,192 [INFO]    🎉 Document T5H7Z6KVBFF3NGBBIFVOSHZOVM successfully transformed.
+2025-12-09 20:17:35,192 [INFO] 📄 Processing Document ID: IRQOGWDD5JC2RF7AL6YQA23PRA
+2025-12-09 20:17:35,192 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-homes-sold-in-parsippany-troy-hills-area-june-23-to-june-29.html
+2025-12-09 20:17:35,192 [INFO]    ✅ Text body found (479 chars).
+2025-12-09 20:17:35,192 [INFO]    ☑️ Title found: 'See homes sold in Parsippany-T...'
+2025-12-09 20:17:35,192 [INFO]    ☑️ Publish Date found: 2025-07-02T04:58:01.854Z
+2025-12-09 20:17:35,192 [INFO]    ☑️ First Publish Date found: 2025-07-02T04:58:01.854Z
+2025-12-09 20:17:35,192 [INFO]    ☑️ Datetime found: 2025-07-02T04:58:01.854Z
+2025-12-09 20:17:35,192 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,192 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,192 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,192 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,192 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,192 [INFO]    🎉 Document IRQOGWDD5JC2RF7AL6YQA23PRA successfully transformed.
+2025-12-09 20:17:35,192 [INFO] 📄 Processing Document ID: PBUJKHAOKNFMBAG5Z4XDPIY7QI
+2025-12-09 20:17:35,192 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-all-homes-sold-in-bloomfield-june-23-to-june-29.html
+2025-12-09 20:17:35,193 [INFO]    ✅ Text body found (457 chars).
+2025-12-09 20:17:35,193 [INFO]    ☑️ Title found: 'See all homes sold in Bloomfie...'
+2025-12-09 20:17:35,193 [INFO]    ☑️ Publish Date found: 2025-07-02T05:08:01.862Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ First Publish Date found: 2025-07-02T05:08:01.862Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Datetime found: 2025-07-02T05:08:01.862Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,193 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,193 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,193 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,193 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,193 [INFO]    🎉 Document PBUJKHAOKNFMBAG5Z4XDPIY7QI successfully transformed.
+2025-12-09 20:17:35,193 [INFO] 📄 Processing Document ID: ZEIGPW2YJZDTNERH5W3M2FKQ4A
+2025-12-09 20:17:35,193 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-homes-sold-in-woodbridge-area-june-23-to-june-29.html
+2025-12-09 20:17:35,193 [INFO]    ✅ Text body found (466 chars).
+2025-12-09 20:17:35,193 [INFO]    ☑️ Title found: 'See homes sold in Woodbridge a...'
+2025-12-09 20:17:35,193 [INFO]    ☑️ Publish Date found: 2025-07-02T05:18:01.769Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ First Publish Date found: 2025-07-02T05:18:01.769Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Datetime found: 2025-07-02T05:18:01.769Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,193 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,193 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,193 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,193 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,193 [INFO]    🎉 Document ZEIGPW2YJZDTNERH5W3M2FKQ4A successfully transformed.
+2025-12-09 20:17:35,193 [INFO] 📄 Processing Document ID: OT6SFEP7RZBNHE4NDLRCVWOSOU
+2025-12-09 20:17:35,193 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-all-homes-sold-in-east-brunswick-june-23-to-june-29.html
+2025-12-09 20:17:35,193 [INFO]    ✅ Text body found (464 chars).
+2025-12-09 20:17:35,193 [INFO]    ☑️ Title found: 'See all homes sold in East Bru...'
+2025-12-09 20:17:35,193 [INFO]    ☑️ Publish Date found: 2025-07-02T05:18:06.796Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ First Publish Date found: 2025-07-02T05:18:06.796Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Datetime found: 2025-07-02T05:18:06.796Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,193 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,193 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,193 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,193 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,193 [INFO]    🎉 Document OT6SFEP7RZBNHE4NDLRCVWOSOU successfully transformed.
+2025-12-09 20:17:35,193 [INFO] 📄 Processing Document ID: ULTEG77EKRBMJKCW7IVJRU5OUQ
+2025-12-09 20:17:35,193 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-all-homes-sold-in-hillsborough-june-23-to-june-29.html
+2025-12-09 20:17:35,193 [INFO]    ✅ Text body found (463 chars).
+2025-12-09 20:17:35,193 [INFO]    ☑️ Title found: 'See all homes sold in Hillsbor...'
+2025-12-09 20:17:35,193 [INFO]    ☑️ Publish Date found: 2025-07-02T05:18:11.737Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ First Publish Date found: 2025-07-02T05:18:11.737Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Datetime found: 2025-07-02T05:18:11.737Z
+2025-12-09 20:17:35,193 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,193 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,194 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,194 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,194 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,194 [INFO]    🎉 Document ULTEG77EKRBMJKCW7IVJRU5OUQ successfully transformed.
+2025-12-09 20:17:35,194 [INFO] 📄 Processing Document ID: 5MUEHHA35NHSHKQV3KDIVLOYUA
+2025-12-09 20:17:35,194 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-homes-sold-in-camden-area-june-23-to-june-29.html
+2025-12-09 20:17:35,194 [INFO]    ✅ Text body found (458 chars).
+2025-12-09 20:17:35,194 [INFO]    ☑️ Title found: 'See homes sold in Camden area,...'
+2025-12-09 20:17:35,194 [INFO]    ☑️ Publish Date found: 2025-07-02T05:48:02.007Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ First Publish Date found: 2025-07-02T05:48:02.007Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ Datetime found: 2025-07-02T05:48:02.007Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,194 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,194 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,194 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,194 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,194 [INFO]    🎉 Document 5MUEHHA35NHSHKQV3KDIVLOYUA successfully transformed.
+2025-12-09 20:17:35,194 [INFO] 📄 Processing Document ID: QSKOJBN34NDEZJQUIGMPSKX42E
+2025-12-09 20:17:35,194 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-homes-sold-in-east-orange-area-june-23-to-june-29.html
+2025-12-09 20:17:35,194 [INFO]    ✅ Text body found (467 chars).
+2025-12-09 20:17:35,194 [INFO]    ☑️ Title found: 'See homes sold in East Orange ...'
+2025-12-09 20:17:35,194 [INFO]    ☑️ Publish Date found: 2025-07-02T05:48:06.99Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ First Publish Date found: 2025-07-02T05:48:06.99Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ Datetime found: 2025-07-02T05:48:06.99Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,194 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,194 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,194 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,194 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,194 [INFO]    🎉 Document QSKOJBN34NDEZJQUIGMPSKX42E successfully transformed.
+2025-12-09 20:17:35,194 [INFO] 📄 Processing Document ID: I7ZS4UWMVRFXZMDLJMQW7FNL5U
+2025-12-09 20:17:35,194 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-all-homes-sold-in-linden-june-23-to-june-29.html
+2025-12-09 20:17:35,194 [INFO]    ✅ Text body found (447 chars).
+2025-12-09 20:17:35,194 [INFO]    ☑️ Title found: 'See all homes sold in Linden, ...'
+2025-12-09 20:17:35,194 [INFO]    ☑️ Publish Date found: 2025-07-02T05:58:01.806Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ First Publish Date found: 2025-07-02T05:58:01.806Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ Datetime found: 2025-07-02T05:58:01.806Z
+2025-12-09 20:17:35,194 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,194 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,195 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,195 [INFO]    🎉 Document I7ZS4UWMVRFXZMDLJMQW7FNL5U successfully transformed.
+2025-12-09 20:17:35,195 [INFO] 📄 Processing Document ID: AP23FZGLGVDOLOBKINF3ILPBII
+2025-12-09 20:17:35,195 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-all-homes-sold-in-berkeley-june-23-to-june-29.html
+2025-12-09 20:17:35,195 [INFO]    ✅ Text body found (454 chars).
+2025-12-09 20:17:35,195 [INFO]    ☑️ Title found: 'See all homes sold in Berkeley...'
+2025-12-09 20:17:35,195 [INFO]    ☑️ Publish Date found: 2025-07-02T06:18:58.626Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ First Publish Date found: 2025-07-02T06:18:01.735Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ Datetime found: 2025-07-02T06:18:58.626Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,195 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,195 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,195 [INFO]    🎉 Document AP23FZGLGVDOLOBKINF3ILPBII successfully transformed.
+2025-12-09 20:17:35,195 [INFO] 📄 Processing Document ID: TLR3IXQ2CBHPDO7H52KQUDBQ5E
+2025-12-09 20:17:35,195 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-homes-sold-in-plainfield-area-june-23-to-june-29.html
+2025-12-09 20:17:35,195 [INFO]    ✅ Text body found (476 chars).
+2025-12-09 20:17:35,195 [INFO]    ☑️ Title found: 'See homes sold in Plainfield a...'
+2025-12-09 20:17:35,195 [INFO]    ☑️ Publish Date found: 2025-07-02T06:38:01.784Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ First Publish Date found: 2025-07-02T06:38:01.784Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ Datetime found: 2025-07-02T06:38:01.784Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,195 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,195 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,195 [INFO]    🎉 Document TLR3IXQ2CBHPDO7H52KQUDBQ5E successfully transformed.
+2025-12-09 20:17:35,195 [INFO] 📄 Processing Document ID: XCR5ZS34YBBPLJ4U2VIMSN5274
+2025-12-09 20:17:35,195 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-all-homes-sold-in-west-orange-june-23-to-june-29.html
+2025-12-09 20:17:35,195 [INFO]    ✅ Text body found (459 chars).
+2025-12-09 20:17:35,195 [INFO]    ☑️ Title found: 'See all homes sold in West Ora...'
+2025-12-09 20:17:35,195 [INFO]    ☑️ Publish Date found: 2025-07-02T06:48:01.787Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ First Publish Date found: 2025-07-02T06:48:01.787Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ Datetime found: 2025-07-02T06:48:01.787Z
+2025-12-09 20:17:35,195 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,195 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,195 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,195 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,195 [INFO]    🎉 Document XCR5ZS34YBBPLJ4U2VIMSN5274 successfully transformed.
+2025-12-09 20:17:35,195 [INFO] 📄 Processing Document ID: 3D7QNFCLPZDJNFQD7JWNZX7NH4
+2025-12-09 20:17:35,195 [INFO]    ✅ URL found: https://www.nj.com/sports/2025/07/madison-keys-vs-olga-danilovic-7225-free-live-stream-watch-wimbledon-match-online-time-tv-channel.html
+2025-12-09 20:17:35,205 [INFO]    ✅ Text body found (1760 chars).
+2025-12-09 20:17:35,205 [INFO]    ☑️ Title found: 'Madison Keys vs. Olga Danilovi...'
+2025-12-09 20:17:35,205 [INFO]    ☑️ Publish Date found: 2025-07-02T07:30:54.528Z
+2025-12-09 20:17:35,205 [INFO]    ☑️ First Publish Date found: 2025-07-02T07:30:00Z
+2025-12-09 20:17:35,205 [INFO]    ☑️ Datetime found: 2025-07-02T07:30:54.528Z
+2025-12-09 20:17:35,205 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,205 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,205 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,205 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,205 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,205 [INFO]    🎉 Document 3D7QNFCLPZDJNFQD7JWNZX7NH4 successfully transformed.
+2025-12-09 20:17:35,205 [INFO] 📄 Processing Document ID: 2FSDVCMJYZDULBQCHOF3SF7CSE
+2025-12-09 20:17:35,205 [INFO]    ✅ URL found: https://www.nj.com/advice/2025/07/dear-abby-how-do-i-tell-the-man-of-my-dreams-hes-not-measuring-up-in-one-particular-way.html
+2025-12-09 20:17:35,206 [INFO]    ✅ Text body found (1165 chars).
+2025-12-09 20:17:35,206 [INFO]    ☑️ Title found: 'Dear Abby: How do I tell the m...'
+2025-12-09 20:17:35,206 [INFO]    ☑️ Publish Date found: 2025-07-02T08:00:00Z
+2025-12-09 20:17:35,206 [INFO]    ☑️ First Publish Date found: 2025-07-02T08:00:00Z
+2025-12-09 20:17:35,206 [INFO]    ☑️ Datetime found: 2025-07-02T08:00:00Z
+2025-12-09 20:17:35,206 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,206 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,206 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,206 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,206 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,206 [INFO]    🎉 Document 2FSDVCMJYZDULBQCHOF3SF7CSE successfully transformed.
+2025-12-09 20:17:35,206 [INFO] 📄 Processing Document ID: 552STPGVMNAOXCHXAXA6XHK6GA
+2025-12-09 20:17:35,206 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-homes-sold-in-lakewood-area-june-23-to-june-29.html
+2025-12-09 20:17:35,206 [INFO]    ✅ Text body found (464 chars).
+2025-12-09 20:17:35,206 [INFO]    ☑️ Title found: 'See homes sold in Lakewood are...'
+2025-12-09 20:17:35,206 [INFO]    ☑️ Publish Date found: 2025-07-02T08:08:01.895Z
+2025-12-09 20:17:35,206 [INFO]    ☑️ First Publish Date found: 2025-07-02T08:08:01.895Z
+2025-12-09 20:17:35,206 [INFO]    ☑️ Datetime found: 2025-07-02T08:08:01.895Z
+2025-12-09 20:17:35,206 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,206 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,206 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,206 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,206 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,206 [INFO]    🎉 Document 552STPGVMNAOXCHXAXA6XHK6GA successfully transformed.
+2025-12-09 20:17:35,206 [INFO] 📄 Processing Document ID: G72554CBFBHZJKMKXWL3HSOX7M
+2025-12-09 20:17:35,206 [INFO]    ✅ URL found: https://www.nj.com/sports/2025/07/amanda-anisimova-vs-renata-zarazua-7225-free-live-stream-watch-wimbledon-match-online-time-tv-channel.html
+2025-12-09 20:17:35,215 [INFO]    ✅ Text body found (1771 chars).
+2025-12-09 20:17:35,215 [INFO]    ☑️ Title found: 'Amanda Anisimova vs. Renata Za...'
+2025-12-09 20:17:35,215 [INFO]    ☑️ Publish Date found: 2025-07-02T08:30:56.755Z
+2025-12-09 20:17:35,215 [INFO]    ☑️ First Publish Date found: 2025-07-02T08:30:00Z
+2025-12-09 20:17:35,215 [INFO]    ☑️ Datetime found: 2025-07-02T08:30:56.755Z
+2025-12-09 20:17:35,215 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,215 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,215 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,215 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,215 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,215 [INFO]    🎉 Document G72554CBFBHZJKMKXWL3HSOX7M successfully transformed.
+2025-12-09 20:17:35,215 [INFO] 📄 Processing Document ID: JGA2BIT64JEKZAK2R6BC47ULUE
+2025-12-09 20:17:35,215 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-homes-sold-in-middletown-area-june-23-to-june-29.html
+2025-12-09 20:17:35,215 [INFO]    ✅ Text body found (464 chars).
+2025-12-09 20:17:35,215 [INFO]    ☑️ Title found: 'See homes sold in Middletown a...'
+2025-12-09 20:17:35,215 [INFO]    ☑️ Publish Date found: 2025-07-02T08:48:02.04Z
+2025-12-09 20:17:35,215 [INFO]    ☑️ First Publish Date found: 2025-07-02T08:48:02.04Z
+2025-12-09 20:17:35,215 [INFO]    ☑️ Datetime found: 2025-07-02T08:48:02.04Z
+2025-12-09 20:17:35,215 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,215 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,215 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,215 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,215 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,215 [INFO]    🎉 Document JGA2BIT64JEKZAK2R6BC47ULUE successfully transformed.
+2025-12-09 20:17:35,215 [INFO] 📄 Processing Document ID: 5T2ASONNNFD7BP6K732PFG32CA
+2025-12-09 20:17:35,215 [INFO]    ✅ URL found: https://www.nj.com/realestate-news/2025/07/see-all-homes-sold-in-mount-laurel-june-23-to-june-29.html
+2025-12-09 20:17:35,215 [INFO]    ✅ Text body found (463 chars).
+2025-12-09 20:17:35,216 [INFO]    ☑️ Title found: 'See all homes sold in Mount La...'
+2025-12-09 20:17:35,216 [INFO]    ☑️ Publish Date found: 2025-07-02T08:58:01.73Z
+2025-12-09 20:17:35,216 [INFO]    ☑️ First Publish Date found: 2025-07-02T08:58:01.73Z
+2025-12-09 20:17:35,216 [INFO]    ☑️ Datetime found: 2025-07-02T08:58:01.73Z
+2025-12-09 20:17:35,216 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,216 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,216 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,216 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,216 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,216 [INFO]    🎉 Document 5T2ASONNNFD7BP6K732PFG32CA successfully transformed.
+2025-12-09 20:17:35,216 [INFO] 📄 Processing Document ID: GHKGSCEGUJHC7M2R2VLW6ZSIPA
+2025-12-09 20:17:35,216 [INFO]    ✅ URL found: https://www.nj.com/sports/2025/07/frances-tiafoe-vs-cameron-norrie-7225-free-live-stream-watch-wimbledon-match-online-time-tv-channel.html
+2025-12-09 20:17:35,225 [INFO]    ✅ Text body found (1764 chars).
+2025-12-09 20:17:35,225 [INFO]    ☑️ Title found: 'Frances Tiafoe vs. Cameron Nor...'
+2025-12-09 20:17:35,225 [INFO]    ☑️ Publish Date found: 2025-07-02T09:01:01.144Z
+2025-12-09 20:17:35,225 [INFO]    ☑️ First Publish Date found: 2025-07-02T09:00:00Z
+2025-12-09 20:17:35,225 [INFO]    ☑️ Datetime found: 2025-07-02T09:01:01.144Z
+2025-12-09 20:17:35,225 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,225 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,225 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,225 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,225 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,225 [INFO]    🎉 Document GHKGSCEGUJHC7M2R2VLW6ZSIPA successfully transformed.
+2025-12-09 20:17:35,225 [INFO] 📄 Processing Document ID: ETT37IIIUFHZFP7C3EE6IQQ7YE
+2025-12-09 20:17:35,225 [INFO]    ✅ URL found: https://www.nj.com/entertainment/2025/07/we-dont-want-our-music-killing-people-popular-rock-band-says-denouncing-streaming-service.html
+2025-12-09 20:17:35,226 [INFO]    ✅ Text body found (2663 chars).
+2025-12-09 20:17:35,226 [INFO]    ☑️ Title found: '‘We don’t want our music killi...'
+2025-12-09 20:17:35,226 [INFO]    ☑️ Publish Date found: 2025-07-11T04:09:52.27Z
+2025-12-09 20:17:35,226 [INFO]    ☑️ First Publish Date found: 2025-07-02T09:00:00Z
+2025-12-09 20:17:35,226 [INFO]    ☑️ Datetime found: 2025-07-11T04:09:52.27Z
+2025-12-09 20:17:35,226 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,226 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,226 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,226 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,226 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,226 [INFO]    🎉 Document ETT37IIIUFHZFP7C3EE6IQQ7YE successfully transformed.
+2025-12-09 20:17:35,226 [INFO] 📄 Processing Document ID: VM6GGVBC6RGXTALNHQQT4F4HXM
+2025-12-09 20:17:35,226 [INFO]    ✅ URL found: https://www.nj.com/sports/2025/07/aryna-sabalenka-vs-marie-bouzkova-7225-free-live-stream-watch-wimbledon-match-online-time-tv-channel.html
+2025-12-09 20:17:35,236 [INFO]    ✅ Text body found (1817 chars).
+2025-12-09 20:17:35,236 [INFO]    ☑️ Title found: 'Aryna Sabalenka vs. Marie Bouz...'
+2025-12-09 20:17:35,236 [INFO]    ☑️ Publish Date found: 2025-07-02T09:30:53.411Z
+2025-12-09 20:17:35,236 [INFO]    ☑️ First Publish Date found: 2025-07-02T09:30:00Z
+2025-12-09 20:17:35,236 [INFO]    ☑️ Datetime found: 2025-07-02T09:30:53.411Z
+2025-12-09 20:17:35,236 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,236 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,236 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,236 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,236 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,236 [INFO]    🎉 Document VM6GGVBC6RGXTALNHQQT4F4HXM successfully transformed.
+2025-12-09 20:17:35,236 [INFO] 📄 Processing Document ID: XKNK7K5YNRGFBCWXCGPX3J35PM
+2025-12-09 20:17:35,236 [INFO]    ✅ URL found: https://www.nj.com/advice/2025/07/miss-manners-cousin-who-gives-vague-responses-should-get-vague-responses.html
+2025-12-09 20:17:35,236 [INFO]    ✅ Text body found (1232 chars).
+2025-12-09 20:17:35,236 [INFO]    ☑️ Title found: 'Miss Manners: Cousin who gives...'
+2025-12-09 20:17:35,236 [INFO]    ☑️ Publish Date found: 2025-07-02T10:00:00Z
+2025-12-09 20:17:35,236 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:00:00Z
+2025-12-09 20:17:35,236 [INFO]    ☑️ Datetime found: 2025-07-02T10:00:00Z
+2025-12-09 20:17:35,236 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,236 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,236 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,236 [INFO]    ☑️ Categories found: 1 items
+2025-12-09 20:17:35,236 [INFO]    ☑️ Tags found: 2 items
+2025-12-09 20:17:35,236 [INFO]    🎉 Document XKNK7K5YNRGFBCWXCGPX3J35PM successfully transformed.
+2025-12-09 20:17:35,236 [INFO] 📄 Processing Document ID: PGHPSYPEWBF6ZC652YLIMNNE4E
+2025-12-09 20:17:35,236 [INFO]    ✅ URL found: https://www.nj.com/yankees/2025/07/yankees-on-verge-of-switcheroo-eugenio-suarez-on-radar-analysis.html
+2025-12-09 20:17:35,239 [INFO]    ✅ Text body found (6414 chars).
+2025-12-09 20:17:35,239 [INFO]    ☑️ Title found: 'Yankees on verge of switcheroo...'
+2025-12-09 20:17:35,239 [INFO]    ☑️ Publish Date found: 2025-07-02T10:01:03.62Z
+2025-12-09 20:17:35,239 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:00:00Z
+2025-12-09 20:17:35,239 [INFO]    ☑️ Datetime found: 2025-07-02T10:01:03.62Z
+2025-12-09 20:17:35,239 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,240 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,240 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,240 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,240 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,240 [INFO]    🎉 Document PGHPSYPEWBF6ZC652YLIMNNE4E successfully transformed.
+2025-12-09 20:17:35,240 [INFO] 📄 Processing Document ID: IATLFPXSUZDNTF6LQ5QF4BGUH4
+2025-12-09 20:17:35,240 [INFO]    ✅ URL found: https://www.nj.com/eagles/2025/07/why-phillies-legend-was-pulled-over-by-police-32-years-ago-after-his-hit-ended-game-at-440-am.html
+2025-12-09 20:17:35,242 [INFO]    ✅ Text body found (7373 chars).
+2025-12-09 20:17:35,242 [INFO]    ☑️ Title found: 'Why Phillies legend was stoppe...'
+2025-12-09 20:17:35,242 [INFO]    ☑️ Publish Date found: 2025-07-04T19:11:44.166Z
+2025-12-09 20:17:35,242 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:00:01Z
+2025-12-09 20:17:35,242 [INFO]    ☑️ Datetime found: 2025-07-04T19:11:44.166Z
+2025-12-09 20:17:35,242 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,242 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,243 [INFO]    ☑️ Sections found: 6 items
+2025-12-09 20:17:35,243 [INFO]    ⚪ Categories empty.
+2025-12-09 20:17:35,243 [INFO]    ☑️ Tags found: 2 items
+2025-12-09 20:17:35,243 [INFO]    🎉 Document IATLFPXSUZDNTF6LQ5QF4BGUH4 successfully transformed.
+2025-12-09 20:17:35,243 [INFO] 📄 Processing Document ID: 5S2UHG6RV5G2JOJQPRUIXM7LAU
+2025-12-09 20:17:35,243 [INFO]    ✅ URL found: https://www.nj.com/mets/2025/07/mets-starter-who-suffered-devastating-injury-seeks-help-of-nba-star.html
+2025-12-09 20:17:35,243 [INFO]    ✅ Text body found (2033 chars).
+2025-12-09 20:17:35,244 [INFO]    ☑️ Title found: 'Mets starter who suffered deva...'
+2025-12-09 20:17:35,244 [INFO]    ☑️ Publish Date found: 2025-07-02T15:05:41.824Z
+2025-12-09 20:17:35,244 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:00:01Z
+2025-12-09 20:17:35,244 [INFO]    ☑️ Datetime found: 2025-07-02T15:05:41.824Z
+2025-12-09 20:17:35,244 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,244 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,244 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,244 [INFO]    ⚪ Categories empty.
+2025-12-09 20:17:35,244 [INFO]    ☑️ Tags found: 1 items
+2025-12-09 20:17:35,244 [INFO]    🎉 Document 5S2UHG6RV5G2JOJQPRUIXM7LAU successfully transformed.
+2025-12-09 20:17:35,244 [INFO] 📄 Processing Document ID: 5TFPVIRYT5BOXMC6JRQXGYF26Y
+2025-12-09 20:17:35,244 [INFO]    ✅ URL found: https://www.nj.com/yankees/2025/07/is-george-lombard-jr-or-anthony-volpe-yankees-future-at-short-scout-has-strong-opinion.html
+2025-12-09 20:17:35,250 [INFO]    ✅ Text body found (7631 chars).
+2025-12-09 20:17:35,250 [INFO]    ☑️ Title found: 'Is George Lombard Jr. or Antho...'
+2025-12-09 20:17:35,250 [INFO]    ☑️ Publish Date found: 2025-07-03T13:10:26.442Z
+2025-12-09 20:17:35,250 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:10:00Z
+2025-12-09 20:17:35,250 [INFO]    ☑️ Datetime found: 2025-07-03T13:10:26.442Z
+2025-12-09 20:17:35,250 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,250 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,250 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,250 [INFO]    ☑️ Categories found: 2 items
+2025-12-09 20:17:35,250 [INFO]    ☑️ Tags found: 1 items
+2025-12-09 20:17:35,250 [INFO]    🎉 Document 5TFPVIRYT5BOXMC6JRQXGYF26Y successfully transformed.
+2025-12-09 20:17:35,250 [INFO] 📄 Processing Document ID: XNFID4CCL5E5LMJDBYJQJMBRCM
+2025-12-09 20:17:35,250 [INFO]    ✅ URL found: https://www.nj.com/news/2025/07/todays-audio-update-netflixs-new-studio-and-jersey-shore-property-expected-to-become-a-park.html
+2025-12-09 20:17:35,251 [INFO]    ✅ Text body found (653 chars).
+2025-12-09 20:17:35,251 [INFO]    ☑️ Title found: 'Today’s audio update: Netflix’...'
+2025-12-09 20:17:35,251 [INFO]    ☑️ Publish Date found: 2025-07-02T10:30:57.992Z
+2025-12-09 20:17:35,251 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:30:00Z
+2025-12-09 20:17:35,251 [INFO]    ☑️ Datetime found: 2025-07-02T10:30:57.992Z
+2025-12-09 20:17:35,251 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,251 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,251 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,251 [INFO]    ☑️ Categories found: 1 items
+2025-12-09 20:17:35,251 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,251 [INFO]    🎉 Document XNFID4CCL5E5LMJDBYJQJMBRCM successfully transformed.
+2025-12-09 20:17:35,251 [INFO] 📄 Processing Document ID: IVTCH3JH4BBZNCDIK4AFDJCAYE
+2025-12-09 20:17:35,251 [INFO]    ✅ URL found: https://www.nj.com/sports/2025/07/carlos-alcaraz-vs-oliver-tarvet-7225-free-live-stream-watch-wimbledon-match-online-time-tv-channel.html
+2025-12-09 20:17:35,260 [INFO]    ✅ Text body found (1805 chars).
+2025-12-09 20:17:35,260 [INFO]    ☑️ Title found: 'Carlos Alcaraz vs. Oliver Tarv...'
+2025-12-09 20:17:35,260 [INFO]    ☑️ Publish Date found: 2025-07-02T10:40:51.828Z
+2025-12-09 20:17:35,260 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:40:00Z
+2025-12-09 20:17:35,260 [INFO]    ☑️ Datetime found: 2025-07-02T10:40:51.828Z
+2025-12-09 20:17:35,260 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,260 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,260 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,260 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,260 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,260 [INFO]    🎉 Document IVTCH3JH4BBZNCDIK4AFDJCAYE successfully transformed.
+2025-12-09 20:17:35,260 [INFO] 📄 Processing Document ID: CUHYPZH77BGCXPI2SSJDOVNQLY
+2025-12-09 20:17:35,260 [INFO]    ✅ URL found: https://www.nj.com/rutgersfootball/2025/07/rutgers-football-signs-multiple-assistant-coaches-to-contract-extensions-heading-into-2025-season.html
+2025-12-09 20:17:35,262 [INFO]    ✅ Text body found (2933 chars).
+2025-12-09 20:17:35,262 [INFO]    ☑️ Title found: 'Rutgers football signs multipl...'
+2025-12-09 20:17:35,262 [INFO]    ☑️ Publish Date found: 2025-07-02T10:52:15.365Z
+2025-12-09 20:17:35,262 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:40:00Z
+2025-12-09 20:17:35,262 [INFO]    ☑️ Datetime found: 2025-07-02T10:52:15.365Z
+2025-12-09 20:17:35,262 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,262 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,262 [INFO]    ☑️ Sections found: 3 items
+2025-12-09 20:17:35,262 [INFO]    ☑️ Categories found: 3 items
+2025-12-09 20:17:35,262 [INFO]    ☑️ Tags found: 3 items
+2025-12-09 20:17:35,262 [INFO]    🎉 Document CUHYPZH77BGCXPI2SSJDOVNQLY successfully transformed.
+2025-12-09 20:17:35,262 [INFO] 📄 Processing Document ID: WHQULF4Z6NGP3GCSIOSUVSNOYE
+2025-12-09 20:17:35,262 [INFO]    ✅ URL found: https://www.nj.com/sports/2025/07/damian-lillards-next-team-odds-point-to-one-team-above-the-rest.html
+2025-12-09 20:17:35,263 [INFO]    ✅ Text body found (629 chars).
+2025-12-09 20:17:35,263 [INFO]    ☑️ Title found: 'Damian Lillard’s next team? Od...'
+2025-12-09 20:17:35,263 [INFO]    ☑️ Publish Date found: 2025-07-02T11:25:20.851Z
+2025-12-09 20:17:35,263 [INFO]    ☑️ First Publish Date found: 2025-07-02T10:45:26.138Z
+2025-12-09 20:17:35,263 [INFO]    ☑️ Datetime found: 2025-07-02T11:25:20.851Z
+2025-12-09 20:17:35,263 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,263 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,263 [INFO]    ☑️ Sections found: 4 items
+2025-12-09 20:17:35,263 [INFO]    ⚪ Categories empty.
+2025-12-09 20:17:35,263 [INFO]    ☑️ Tags found: 3 items
+2025-12-09 20:17:35,263 [INFO]    🎉 Document WHQULF4Z6NGP3GCSIOSUVSNOYE successfully transformed.
+2025-12-09 20:17:35,263 [INFO] 📄 Processing Document ID: DCS57SUXQZDSTFC3KTP47QO47U
+2025-12-09 20:17:35,263 [INFO]    ✅ URL found: https://www.nj.com/advice/2025/07/asking-eric-i-try-to-see-my-daughters-husband-as-she-does-but-hes-just-not-good-enough-for-her.html
+2025-12-09 20:17:35,263 [INFO]    ✅ Text body found (3737 chars).
+2025-12-09 20:17:35,263 [INFO]    ☑️ Title found: 'Asking Eric: I try to see my d...'
+2025-12-09 20:17:35,263 [INFO]    ☑️ Publish Date found: 2025-07-02T11:00:00Z
+2025-12-09 20:17:35,263 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:00:00Z
+2025-12-09 20:17:35,263 [INFO]    ☑️ Datetime found: 2025-07-02T11:00:00Z
+2025-12-09 20:17:35,263 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,263 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,263 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,263 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,263 [INFO]    ☑️ Tags found: 3 items
+2025-12-09 20:17:35,263 [INFO]    🎉 Document DCS57SUXQZDSTFC3KTP47QO47U successfully transformed.
+2025-12-09 20:17:35,263 [INFO] 📄 Processing Document ID: YJ4NCL4TN5A5JBIGZCHMRKK4R4
+2025-12-09 20:17:35,264 [INFO]    ✅ URL found: https://www.nj.com/phillies/2025/07/will-phillies-zack-wheeler-start-the-all-star-game-in-his-hometown-of-atlanta.html
+2025-12-09 20:17:35,264 [INFO]    ✅ Text body found (2733 chars).
+2025-12-09 20:17:35,264 [INFO]    ☑️ Title found: 'Will Phillies’ Zack Wheeler st...'
+2025-12-09 20:17:35,264 [INFO]    ☑️ Publish Date found: 2025-07-02T11:01:00Z
+2025-12-09 20:17:35,264 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:01:00Z
+2025-12-09 20:17:35,264 [INFO]    ☑️ Datetime found: 2025-07-02T11:01:00Z
+2025-12-09 20:17:35,264 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,264 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,264 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,264 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,264 [INFO]    ⚪ Tags empty.
+2025-12-09 20:17:35,264 [INFO]    🎉 Document YJ4NCL4TN5A5JBIGZCHMRKK4R4 successfully transformed.
+2025-12-09 20:17:35,264 [INFO] 📄 Processing Document ID: 5QVHU5YKHVCUFL5G2L7QIYSYTY
+2025-12-09 20:17:35,264 [INFO]    ✅ URL found: https://www.nj.com/education/2025/07/the-5-biggest-perks-in-new-rutgers-presidents-record-breaking-contract.html
+2025-12-09 20:17:35,266 [INFO]    ✅ Text body found (3947 chars).
+2025-12-09 20:17:35,266 [INFO]    ☑️ Title found: 'The 5 biggest perks in new Rut...'
+2025-12-09 20:17:35,266 [INFO]    ☑️ Publish Date found: 2025-07-04T04:10:24.26Z
+2025-12-09 20:17:35,266 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:01:00Z
+2025-12-09 20:17:35,266 [INFO]    ☑️ Datetime found: 2025-07-04T04:10:24.26Z
+2025-12-09 20:17:35,266 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,266 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,266 [INFO]    ☑️ Sections found: 3 items
+2025-12-09 20:17:35,266 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,266 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,266 [INFO]    🎉 Document 5QVHU5YKHVCUFL5G2L7QIYSYTY successfully transformed.
+2025-12-09 20:17:35,266 [INFO] 📄 Processing Document ID: KNQJREAL2JBJFGZHQRRYCLFDOM
+2025-12-09 20:17:35,266 [INFO]    ✅ URL found: https://www.nj.com/gloucester-county/2025/07/5-lined-skink-is-njs-only-native-lizard-found-statewidegloucester-county-nature-club.html
+2025-12-09 20:17:35,267 [INFO]    ✅ Text body found (2745 chars).
+2025-12-09 20:17:35,267 [INFO]    ☑️ Title found: '5-lined skink is N.J.’s only n...'
+2025-12-09 20:17:35,267 [INFO]    ☑️ Publish Date found: 2025-07-02T11:03:14.358Z
+2025-12-09 20:17:35,267 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:02:19.252Z
+2025-12-09 20:17:35,267 [INFO]    ☑️ Datetime found: 2025-07-02T11:03:14.358Z
+2025-12-09 20:17:35,267 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,267 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,267 [INFO]    ☑️ Sections found: 3 items
+2025-12-09 20:17:35,267 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,267 [INFO]    ☑️ Tags found: 3 items
+2025-12-09 20:17:35,267 [INFO]    🎉 Document KNQJREAL2JBJFGZHQRRYCLFDOM successfully transformed.
+2025-12-09 20:17:35,267 [INFO] 📄 Processing Document ID: YG3YF6F5H5HKLBSKFA76BOIXHQ
+2025-12-09 20:17:35,267 [INFO]    ✅ URL found: https://www.nj.com/news/2025/07/nj-fireworks-2025-fourth-of-july-4th-list-of-parades-concerts-events.html
+2025-12-09 20:17:35,267 [INFO]    ✅ Text body found (1005 chars).
+2025-12-09 20:17:35,267 [INFO]    ☑️ Title found: 'N.J. fireworks 2025 Fourth of ...'
+2025-12-09 20:17:35,267 [INFO]    ☑️ Publish Date found: 2025-07-03T15:27:49.277Z
+2025-12-09 20:17:35,267 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:16:00Z
+2025-12-09 20:17:35,267 [INFO]    ☑️ Datetime found: 2025-07-03T15:27:49.277Z
+2025-12-09 20:17:35,267 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,267 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,267 [INFO]    ☑️ Sections found: 22 items
+2025-12-09 20:17:35,267 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,267 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,267 [INFO]    🎉 Document YG3YF6F5H5HKLBSKFA76BOIXHQ successfully transformed.
+2025-12-09 20:17:35,267 [INFO] 📄 Processing Document ID: 4DBOQLVRS5CM7ODP2KOC3H4B3Q
+2025-12-09 20:17:35,267 [INFO]    ✅ URL found: https://www.nj.com/rutgersbasketball/2025/07/spurs-envision-ex-rutgers-star-as-part-of-new-big-3-to-challenge-nba-champs.html
+2025-12-09 20:17:35,269 [INFO]    ✅ Text body found (3177 chars).
+2025-12-09 20:17:35,269 [INFO]    ☑️ Title found: 'Spurs envision ex-Rutgers star...'
+2025-12-09 20:17:35,269 [INFO]    ☑️ Publish Date found: 2025-07-02T15:19:54.091Z
+2025-12-09 20:17:35,269 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:24:08.701Z
+2025-12-09 20:17:35,269 [INFO]    ☑️ Datetime found: 2025-07-02T15:19:54.091Z
+2025-12-09 20:17:35,269 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,269 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,269 [INFO]    ☑️ Sections found: 5 items
+2025-12-09 20:17:35,269 [INFO]    ⚪ Categories empty.
+2025-12-09 20:17:35,269 [INFO]    ⚪ Tags empty.
+2025-12-09 20:17:35,269 [INFO]    🎉 Document 4DBOQLVRS5CM7ODP2KOC3H4B3Q successfully transformed.
+2025-12-09 20:17:35,269 [INFO] 📄 Processing Document ID: GQF2XBCNO5EJ7OUJ44PITEKHK4
+2025-12-09 20:17:35,269 [INFO]    ✅ URL found: https://www.nj.com/news/2025/07/why-80-people-were-firing-shotguns-off-njs-most-famous-warship-last-week.html
+2025-12-09 20:17:35,270 [INFO]    ✅ Text body found (2982 chars).
+2025-12-09 20:17:35,270 [INFO]    ☑️ Title found: 'Why 80 people were firing shot...'
+2025-12-09 20:17:35,270 [INFO]    ☑️ Publish Date found: 2025-07-02T11:26:06.169Z
+2025-12-09 20:17:35,270 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:25:00Z
+2025-12-09 20:17:35,270 [INFO]    ☑️ Datetime found: 2025-07-02T11:26:06.169Z
+2025-12-09 20:17:35,270 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,270 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,270 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,270 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,270 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,270 [INFO]    🎉 Document GQF2XBCNO5EJ7OUJ44PITEKHK4 successfully transformed.
+2025-12-09 20:17:35,270 [INFO] 📄 Processing Document ID: 7QIETJFELBDVPFFJJSRVXQ6GLA
+2025-12-09 20:17:35,270 [INFO]    ✅ URL found: https://www.nj.com/weather/2025/07/nj-weather-rain-thunderstorms-likely-today-thursday-early-july-4th-forecast.html
+2025-12-09 20:17:35,271 [INFO]    ✅ Text body found (1969 chars).
+2025-12-09 20:17:35,271 [INFO]    ☑️ Title found: 'N.J. weather: Rain, thundersto...'
+2025-12-09 20:17:35,271 [INFO]    ☑️ Publish Date found: 2025-07-02T11:32:54.124Z
+2025-12-09 20:17:35,271 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:26:03.161Z
+2025-12-09 20:17:35,271 [INFO]    ☑️ Datetime found: 2025-07-02T11:32:54.124Z
+2025-12-09 20:17:35,271 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,271 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,271 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,271 [INFO]    ⚪ Categories empty.
+2025-12-09 20:17:35,271 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,271 [INFO]    🎉 Document 7QIETJFELBDVPFFJJSRVXQ6GLA successfully transformed.
+2025-12-09 20:17:35,271 [INFO] 📄 Processing Document ID: VKAGZ3WZ7NFJPEOATVA2RTM7RU
+2025-12-09 20:17:35,271 [INFO]    ✅ URL found: https://www.nj.com/politics/2025/07/see-who-has-a-big-early-lead-in-first-poll-of-njs-ciattarelli-vs-sherrill-governors-race.html
+2025-12-09 20:17:35,276 [INFO]    ✅ Text body found (4682 chars).
+2025-12-09 20:17:35,276 [INFO]    ☑️ Title found: 'See who has a big early lead i...'
+2025-12-09 20:17:35,276 [INFO]    ☑️ Publish Date found: 2025-07-07T00:50:05.401Z
+2025-12-09 20:17:35,276 [INFO]    ☑️ First Publish Date found: 2025-07-02T11:30:00Z
+2025-12-09 20:17:35,276 [INFO]    ☑️ Datetime found: 2025-07-07T00:50:05.401Z
+2025-12-09 20:17:35,276 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,276 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,276 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,276 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,276 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,276 [INFO]    🎉 Document VKAGZ3WZ7NFJPEOATVA2RTM7RU successfully transformed.
+2025-12-09 20:17:35,276 [INFO] 📄 Processing Document ID: 2KGLAIGGY5EXLOVQGIRM4XTLXU
+2025-12-09 20:17:35,276 [INFO]    ✅ URL found: https://www.nj.com/entertainment/2025/07/has-asbury-park-already-peaked-a-deep-dive-into-jerseys-hottest-shore-town.html
+2025-12-09 20:17:35,281 [INFO]    ✅ Text body found (3103 chars).
+2025-12-09 20:17:35,281 [INFO]    ☑️ Title found: 'Has Asbury Park already peaked...'
+2025-12-09 20:17:35,281 [INFO]    ☑️ Publish Date found: 2025-07-02T18:29:34.945Z
+2025-12-09 20:17:35,281 [INFO]    ☑️ First Publish Date found: 2025-07-02T12:00:00Z
+2025-12-09 20:17:35,281 [INFO]    ☑️ Datetime found: 2025-07-02T18:29:34.945Z
+2025-12-09 20:17:35,281 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,281 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,281 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,281 [INFO]    ☑️ Categories found: 2 items
+2025-12-09 20:17:35,281 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,281 [INFO]    🎉 Document 2KGLAIGGY5EXLOVQGIRM4XTLXU successfully transformed.
+2025-12-09 20:17:35,281 [INFO] 📄 Processing Document ID: V4T3YI43TFA4FOPVLABJS3VLLU
+2025-12-09 20:17:35,281 [INFO]    ✅ URL found: https://www.nj.com/sports/2025/07/taylor-fritz-vs-gabriel-diallo-7225-free-live-stream-watch-wimbledon-match-online-time-tv-channel.html
+2025-12-09 20:17:35,290 [INFO]    ✅ Text body found (1764 chars).
+2025-12-09 20:17:35,290 [INFO]    ☑️ Title found: 'Taylor Fritz vs. Gabriel Diall...'
+2025-12-09 20:17:35,290 [INFO]    ☑️ Publish Date found: 2025-07-02T12:01:52.691Z
+2025-12-09 20:17:35,290 [INFO]    ☑️ First Publish Date found: 2025-07-02T12:00:00Z
+2025-12-09 20:17:35,290 [INFO]    ☑️ Datetime found: 2025-07-02T12:01:52.691Z
+2025-12-09 20:17:35,290 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,290 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,290 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,290 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,290 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,290 [INFO]    🎉 Document V4T3YI43TFA4FOPVLABJS3VLLU successfully transformed.
+2025-12-09 20:17:35,290 [INFO] 📄 Processing Document ID: WE5GROXSHVAXPO6ZAOYMV65KDY
+2025-12-09 20:17:35,290 [INFO]    ✅ URL found: https://www.nj.com/business/2025/07/what-is-open-on-july-4th-see-all-open-stores-services-and-more-on-the-4th-of-july.html
+2025-12-09 20:17:35,296 [INFO]    ✅ Text body found (4082 chars).
+2025-12-09 20:17:35,296 [INFO]    ☑️ Title found: 'What is open on July 4th? See ...'
+2025-12-09 20:17:35,296 [INFO]    ☑️ Publish Date found: 2025-07-02T13:45:08.066Z
+2025-12-09 20:17:35,296 [INFO]    ☑️ First Publish Date found: 2025-07-02T12:00:00Z
+2025-12-09 20:17:35,296 [INFO]    ☑️ Datetime found: 2025-07-02T13:45:08.066Z
+2025-12-09 20:17:35,296 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,296 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,296 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,296 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,296 [INFO]    ☑️ Tags found: 4 items
+2025-12-09 20:17:35,296 [INFO]    🎉 Document WE5GROXSHVAXPO6ZAOYMV65KDY successfully transformed.
+2025-12-09 20:17:35,296 [INFO] 📄 Processing Document ID: PCNAP7EAAVEONL4KROK3R574C4
+2025-12-09 20:17:35,296 [INFO]    ✅ URL found: https://www.nj.com/advice/2025/07/july-2-birthday-horoscope-and-your-daily-astrology.html
+2025-12-09 20:17:35,298 [INFO]    ✅ Text body found (4593 chars).
+2025-12-09 20:17:35,298 [INFO]    ☑️ Title found: 'July 2 birthday horoscope and ...'
+2025-12-09 20:17:35,298 [INFO]    ☑️ Publish Date found: 2025-07-02T12:00:00Z
+2025-12-09 20:17:35,298 [INFO]    ☑️ First Publish Date found: 2025-07-02T12:00:00Z
+2025-12-09 20:17:35,298 [INFO]    ☑️ Datetime found: 2025-07-02T12:00:00Z
+2025-12-09 20:17:35,298 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,298 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,298 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,298 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,298 [INFO]    ☑️ Tags found: 3 items
+2025-12-09 20:17:35,298 [INFO]    🎉 Document PCNAP7EAAVEONL4KROK3R574C4 successfully transformed.
+2025-12-09 20:17:35,298 [INFO] 📄 Processing Document ID: BPU74ZWZK5DBNORLVSF7FWROZU
+2025-12-09 20:17:35,298 [INFO]    ✅ URL found: https://www.nj.com/mosaic/2025/07/why-experts-fear-the-drop-in-nj-gun-violence-could-reverse-this-summer.html
+2025-12-09 20:17:35,305 [INFO]    ✅ Text body found (9148 chars).
+2025-12-09 20:17:35,305 [INFO]    ☑️ Title found: 'Why experts fear the drop in N...'
+2025-12-09 20:17:35,305 [INFO]    ☑️ Publish Date found: 2025-07-02T12:55:11.551Z
+2025-12-09 20:17:35,305 [INFO]    ☑️ First Publish Date found: 2025-07-02T12:15:52.199Z
+2025-12-09 20:17:35,305 [INFO]    ☑️ Datetime found: 2025-07-02T12:55:11.551Z
+2025-12-09 20:17:35,305 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,305 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,306 [INFO]    ☑️ Sections found: 1 items
+2025-12-09 20:17:35,306 [INFO]    ☑️ Categories found: 5 items
+2025-12-09 20:17:35,306 [INFO]    ☑️ Tags found: 5 items
+2025-12-09 20:17:35,306 [INFO]    🎉 Document BPU74ZWZK5DBNORLVSF7FWROZU successfully transformed.
+2025-12-09 20:17:35,306 [INFO] 📄 Processing Document ID: 7VQXMIUFSFBY7KTUJTBBEFOPIQ
+2025-12-09 20:17:35,306 [INFO]    ✅ URL found: https://www.nj.com/news/2025/07/bus-crash-injures-12-shuts-down-ny-bus-terminal-during-morning-rush.html
+2025-12-09 20:17:35,306 [INFO]    ✅ Text body found (1628 chars).
+2025-12-09 20:17:35,306 [INFO]    ☑️ Title found: 'Bus crash injures 17, closes p...'
+2025-12-09 20:17:35,306 [INFO]    ☑️ Publish Date found: 2025-07-02T16:57:08.364Z
+2025-12-09 20:17:35,306 [INFO]    ☑️ First Publish Date found: 2025-07-02T12:30:43.206Z
+2025-12-09 20:17:35,306 [INFO]    ☑️ Datetime found: 2025-07-02T16:57:08.364Z
+2025-12-09 20:17:35,306 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,306 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,306 [INFO]    ☑️ Sections found: 2 items
+2025-12-09 20:17:35,306 [INFO]    ☑️ Categories found: 3 items
+2025-12-09 20:17:35,306 [INFO]    ☑️ Tags found: 2 items
+2025-12-09 20:17:35,306 [INFO]    🎉 Document 7VQXMIUFSFBY7KTUJTBBEFOPIQ successfully transformed.
+2025-12-09 20:17:35,306 [INFO] 📄 Processing Document ID: 5KRZIWXTEFB6NIJKG6XQV7BUV4
+2025-12-09 20:17:35,306 [INFO]    ✅ URL found: https://www.nj.com/weather/2025/07/nj-weather-5-inches-of-rain-fell-overnight-see-how-much-rain-your-town-got.html
+2025-12-09 20:17:35,307 [INFO]    ✅ Text body found (1176 chars).
+2025-12-09 20:17:35,307 [INFO]    ☑️ Title found: 'N.J. weather: 5+ inches of rai...'
+2025-12-09 20:17:35,307 [INFO]    ☑️ Publish Date found: 2025-07-03T19:11:53.392Z
+2025-12-09 20:17:35,307 [INFO]    ☑️ First Publish Date found: 2025-07-02T12:57:49.485Z
+2025-12-09 20:17:35,307 [INFO]    ☑️ Datetime found: 2025-07-03T19:11:53.392Z
+2025-12-09 20:17:35,307 [INFO]    ☑️ Website found: nj
+2025-12-09 20:17:35,307 [INFO]    ☑️ Thumbnail found.
+2025-12-09 20:17:35,307 [INFO]    ☑️ Sections found: 4 items
+2025-12-09 20:17:35,307 [INFO]    ☑️ Categories found: 4 items
+2025-12-09 20:17:35,307 [INFO]    ☑️ Tags found: 2 items
+2025-12-09 20:17:35,307 [INFO]    🎉 Document 5KRZIWXTEFB6NIJKG6XQV7BUV4 successfully transformed.

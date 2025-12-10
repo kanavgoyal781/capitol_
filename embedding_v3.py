@@ -29,3 +29,6 @@ class EmbeddingModel:
             logger.error(f"OpenAI error: {e}")
             return []
 
+if __name__ == "__main__":
+    pass
+

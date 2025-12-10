@@ -7,3 +7,5 @@ sentence-transformers
 qdrant-client
 numpy
 openai
+hypothesis
+httpx

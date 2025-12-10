@@ -1,0 +1,4 @@
+# file: /Users/kanavgoyal/Capitol_AI_TakeHomeTask/renderapp/pipeline.py
+# hypothesis_version: 6.148.7
+
+['   ⚪ Sections empty.', '   ⚪ Tags empty.', '/', 'CapitolPipeline', 'Missing ID', 'Missing Text', 'Missing URL', 'SKIPPED', 'SUCCESS', 'UNKNOWN_ID', 'Unknown', 'Z', '__main__', '_id', 'a', 'basic', 'canonical_website', 'categories', 'classifier', 'content', 'content_elements', 'datetime', 'external_id', 'first_publish_date', 'headlines', 'html.parser', 'iab_content_taxonomy', 'id', 'ingestion_report.csv', 'name', 'pipeline.log', 'promo_items', 'publish_date', 'r', 'raw_doc', 'reason', 'resizeUrl', 'score', 'sections', 'slug', 'status', 'tags', 'taxonomy', 'text', 'thumb', 'title', 'type', 'unknown', 'url', 'utf-8', 'w', 'website', 'website_url']
