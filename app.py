@@ -32,7 +32,9 @@ def api_transform_data(raw_data: List[Any]):  # 1. Use List[Any] to accept mixed
     try:
         transformer = DataTransformer()
         valid_docs: List[Dict[str, Any]] = []
-        seen_ids = set()
+        # seen_ids = set()
+        valid_docs_map = {}
+
 
         # 2. Basic Type Check: Is the whole body a list?
         if not isinstance(raw_data, list):
@@ -58,17 +60,26 @@ def api_transform_data(raw_data: List[Any]):  # 1. Use List[Any] to accept mixed
             # ✅ Safe to use dictionary methods now
             doc_id = doc.get('_id')
 
-            # Deduplicate
-            if doc_id in seen_ids:
-                continue
-            if doc_id:
-                seen_ids.add(doc_id)
+            # # Deduplicate
+            # if doc_id in seen_ids:
+            #     continue
+            # if doc_id:
+            #     seen_ids.add(doc_id)
 
             # Process
             result, report = transformer.process_document(doc)
 
             if result:
-                valid_docs.append(result)
+                # valid_docs.append(result)
+
+                ext_id = result.get('metadata', {}).get('external_id')
+                if ext_id:
+                    if ext_id in valid_docs_map:
+                        logger.info(f"   🔄 UPDATING: Overwriting existing record for ID {ext_id}")
+                    
+                    # This line handles both Insert (new key) and Update (overwrite value)
+                    valid_docs_map[ext_id] = result
+                
             else:
                 # Log failed validations
                 with open(dead_letter_path, "a", encoding="utf-8") as dl:
@@ -79,6 +90,7 @@ def api_transform_data(raw_data: List[Any]):  # 1. Use List[Any] to accept mixed
                     }
                     dl.write(json.dumps(record, ensure_ascii=False) + "\n")
 
+        valid_docs = list(valid_docs_map.values())
         return valid_docs
 
     except HTTPException:
@@ -167,7 +179,8 @@ def api_run_full_pipeline(raw_data: List[Any]): # 1. Use List[Any]
         # --- STAGE 1: TRANSFORM ---
         transformer = DataTransformer()
         clean_docs = []
-        seen_ids = set()
+        # seen_ids = set()
+        valid_docs_map = {}
 
         if not isinstance(raw_data, list):
              raise HTTPException(status_code=400, detail="Input must be a list")
@@ -184,12 +197,20 @@ def api_run_full_pipeline(raw_data: List[Any]): # 1. Use List[Any]
                 continue
 
             doc_id = doc.get('_id')
-            if doc_id in seen_ids: continue
-            if doc_id: seen_ids.add(doc_id)
+            # if doc_id in seen_ids: continue
+            # if doc_id: seen_ids.add(doc_id)
 
             res, report = transformer.process_document(doc)
             if res:
-                clean_docs.append(res)
+                # clean_docs.append(res)
+
+                ext_id = res.get('metadata', {}).get('external_id')
+                if ext_id:
+                    if ext_id in valid_docs_map:
+                        logger.info(f"   🔄 UPDATING: Overwriting existing record for ID {ext_id}")
+                    
+                    valid_docs_map[ext_id] = res
+                
             else:
                 # Log failures
                 with open(dead_letter_path, "a", encoding="utf-8") as dl:
@@ -200,6 +221,8 @@ def api_run_full_pipeline(raw_data: List[Any]): # 1. Use List[Any]
                     }
                     dl.write(json.dumps(record, ensure_ascii=False) + "\n")
 
+        clean_docs = list(valid_docs_map.values())
+        
         if not clean_docs:
             return {"processed": 0, "indexed": 0}
 

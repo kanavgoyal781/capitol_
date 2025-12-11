@@ -290,10 +290,22 @@ class DataTransformer:
         return self.format_date_iso(date_str)
 
     def extract_datetime(self, raw_doc):
-        """
-        Extracts the main datetime.
-        Schema: 'Typically the same as publish_date'
-        """
+        return self.extract_publish_date(raw_doc)
+
+    # def extract_datetime(self, raw_doc):
+    #     """
+    #     Extracts the main datetime.
+    #     Per feedback: Treat as separate from publish_date. 
+    #     Prioritize 'last_updated_date' as it represents the most current state.
+    #     """
+    #     # 1. Try 'last_updated_date' first
+    #     # This ensures 'datetime' (update) is distinct from 'publish_date' (initial)
+    #     date_str = raw_doc.get('last_updated_date')
+    #     formatted = self.format_date_iso(date_str)
+    #     if formatted:
+    #         return formatted
+            
+        # 2. Fallback to 'publish_date' if the doc was never updated
         return self.extract_publish_date(raw_doc)
 
     def extract_website(self, raw_doc):
@@ -569,6 +581,165 @@ class DataTransformer:
             report["reason"] = f"Crash: {str(e)}"
             return None, report
 dead_letter_path = "output/dead_letter_queue.jsonl"
+
+# --- MAIN EXECUTION ---
+# if __name__ == "__main__":
+#     try:
+#         with open("data/raw_customer_api.json", "r", encoding="utf-8") as f:
+#             raw_data = json.load(f)
+#     except FileNotFoundError:
+#         print("❌ Error: 'raw_customer_api.json' not found.")
+#         exit(1)
+
+#     transformer = DataTransformer()
+    
+#     # FIX: Use a dictionary to handle Overwrites (Updates)
+#     # Key = external_id, Value = processed_doc
+#     # If the same ID comes later, it will overwrite the previous entry.
+#     valid_docs_map = {}
+#     report_data = []
+
+#     print(f"🚀 Starting ingestion of {len(raw_data)} documents...")
+
+#     for doc in raw_data:
+#         # Process EVERY document first to ensure we catch updates
+#         processed_doc, report = transformer.process_document(doc)
+#         report_data.append(report)
+        
+# #         if processed_doc:
+#             # FIX: Get the ID and overwrite in the map
+#             ext_id = processed_doc.get('metadata', {}).get('external_id')
+#             if ext_id:
+#                 valid_docs_map[ext_id] = processed_doc
+#         else:
+#             # Write failures to Dead Letter Queue
+#             doc_id = doc.get('_id', 'UNKNOWN')
+#             with open(dead_letter_path, "a", encoding="utf-8") as dl:
+#                 record = {
+#                     "id": doc_id,
+#                     "reason": report.get("reason", "unknown"),
+#                     "raw_doc": doc,
+#                 }
+#                 dl.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+#     # Convert map back to list for final output
+#     valid_docs = list(valid_docs_map.values())
+
+#     # Save Valid Output (JSON)
+#     with open("output/processed_output_updated_2.json", "w", encoding="utf-8") as f:
+#         json.dump(valid_docs, f, indent=2, ensure_ascii=False)
+
+#     # Save Summary Report (CSV)
+#     with open("output/ingestion_report.csv", "w", newline="", encoding="utf-8") as f:
+#         writer = csv.DictWriter(f, fieldnames=["id", "status", "reason"])
+#         writer.writeheader()
+#         writer.writerows(report_data)
+
+#     print("\n✅ Processing Complete!")
+#     print(f"   - Valid Unique Docs: {len(valid_docs)} (Saved to processed_output_updated.json)")
+#     print(f"   - Failed/Skipped: {len(raw_data) - len(valid_docs)}")
+#     print(f"   - Detailed Logs: pipeline.log")
+#     print(f"   - Summary Report: ingestion_report.csv")
+# --- MAIN EXECUTION ---
+# if __name__ == "__main__":
+#     try:
+#         with open("data/raw_customer_api.json", "r", encoding="utf-8") as f:
+#             raw_data = json.load(f)
+#     except FileNotFoundError:
+#         print("❌ Error: 'raw_customer_api.json' not found.")
+#         exit(1)
+
+#     transformer = DataTransformer()
+#     valid_docs = []
+#     report_data = []
+    
+#     # [CHANGE 3: Added seen_ids set for duplicate handling]
+#     seen_ids = set()
+
+#     print(f"🚀 Starting ingestion of {len(raw_data)} documents...")
+
+#     for doc in raw_data:
+#         # Check for duplicates BEFORE processing
+#         doc_id = doc.get('_id')
+#         if doc_id in seen_ids:
+#             logger.warning(f"⚠️ SKIPPING {doc_id}: Duplicate external_id found.")
+#             report_data.append({
+#                 "id": doc_id,
+#                 "status": "SKIPPED",
+#                 "reason": "Duplicate external_id"
+#             })
+#             continue
+        
+#         if doc_id:
+#             seen_ids.add(doc_id)
+
+#         # Process document
+#         processed_doc, report = transformer.process_document(doc)
+#         report_data.append(report)
+#         if processed_doc:
+#             valid_docs.append(processed_doc)
+#         else:
+#         # anything that failed validation / critical checks
+#             with open(dead_letter_path, "a", encoding="utf-8") as dl:
+#                 record = {
+#                 "id": doc_id,
+#                 "reason": report.get("reason", "unknown"),
+#                 "raw_doc": doc,
+#                 }
+#                 dl.write(json.dumps(record, ensure_ascii=False) + "\n")
+#     # Save Valid Output (JSON)
+#     with open("output/processed_output_updated_2.json", "w", encoding="utf-8") as f:
+#         json.dump(valid_docs, f, indent=2, ensure_ascii=False)
+
+#     # Save Summary Report (CSV)
+#     with open("output/ingestion_report.csv", "w", newline="", encoding="utf-8") as f:
+#         writer = csv.DictWriter(f, fieldnames=["id", "status", "reason"])
+#         writer.writeheader()
+#         writer.writerows(report_data)
+
+#     print("\n✅ Processing Complete!")
+#     print(f"   - Valid Docs: {len(valid_docs)} (Saved to processed_output_updated.json)")
+#     print(f"   - Failed/Skipped: {len(raw_data) - len(valid_docs)}")
+#     print(f"   - Detailed Logs: pipeline.log")
+#     print(f"   - Summary Report: ingestion_report.csv")
+
+
+# In[29]:
+
+
+# def execute_transformation_step(input_file: str, output_file: str) -> List[Dict]:
+#     transformer = DataTransformer()
+#     try:
+#         with open(input_file, "r", encoding="utf-8") as f:
+#             raw_data = json.load(f)
+#     except FileNotFoundError:
+#         raise FileNotFoundError(f"Input file '{input_file}' not found.")
+    
+#     valid_docs = []
+#     seen_ids = set()
+    
+#     for doc in raw_data:
+#         doc_id = doc.get('_id')
+#         if doc_id in seen_ids: 
+#             continue
+#         if doc_id: 
+#             seen_ids.add(doc_id)
+        
+#         # FIX: Unpack the tuple (result, report)
+#         result, report = transformer.process_document(doc)
+        
+#         # FIX: Check result and append directly (it is already a dict, not a model)
+#         if result: 
+#             valid_docs.append(result)
+    
+#     with open(output_file, "w", encoding="utf-8") as f:
+#         json.dump(valid_docs, f, indent=2, ensure_ascii=False)
+    
+#     return valid_docs
+
+
+# # In[ ]:
+
 # --- MAIN EXECUTION ---
 if __name__ == "__main__":
     try:
@@ -579,43 +750,42 @@ if __name__ == "__main__":
         exit(1)
 
     transformer = DataTransformer()
-    valid_docs = []
-    report_data = []
     
-    # [CHANGE 3: Added seen_ids set for duplicate handling]
-    seen_ids = set()
+    # Key = external_id, Value = processed_doc
+    # Using a dict ensures that if the same ID appears later, it overwrites the old one (Update).
+    valid_docs_map = {}
+    report_data = []
 
     print(f"🚀 Starting ingestion of {len(raw_data)} documents...")
 
     for doc in raw_data:
-        # Check for duplicates BEFORE processing
-        doc_id = doc.get('_id')
-        if doc_id in seen_ids:
-            logger.warning(f"⚠️ SKIPPING {doc_id}: Duplicate external_id found.")
-            report_data.append({
-                "id": doc_id,
-                "status": "SKIPPED",
-                "reason": "Duplicate external_id"
-            })
-            continue
-        
-        if doc_id:
-            seen_ids.add(doc_id)
-
-        # Process document
+        # 1. Process EVERY document first
         processed_doc, report = transformer.process_document(doc)
         report_data.append(report)
+        
         if processed_doc:
-            valid_docs.append(processed_doc)
+            # 2. Check for ID and handle Upsert (Update/Insert)
+            ext_id = processed_doc.get('metadata', {}).get('external_id')
+            if ext_id:
+                if ext_id in valid_docs_map:
+                    logger.info(f"   🔄 UPDATING: Overwriting existing record for ID {ext_id}")
+                
+                # This line handles both Insert (new key) and Update (overwrite value)
+                valid_docs_map[ext_id] = processed_doc
         else:
-        # anything that failed validation / critical checks
+            # 3. Handle Failures (Missing URL/ID/Text)
+            doc_id = doc.get('_id', 'UNKNOWN')
             with open(dead_letter_path, "a", encoding="utf-8") as dl:
                 record = {
-                "id": doc_id,
-                "reason": report.get("reason", "unknown"),
-                "raw_doc": doc,
+                    "id": doc_id,
+                    "reason": report.get("reason", "unknown"),
+                    "raw_doc": doc,
                 }
                 dl.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+    # Convert map back to list for final JSON output
+    valid_docs = list(valid_docs_map.values())
+
     # Save Valid Output (JSON)
     with open("output/processed_output_updated_2.json", "w", encoding="utf-8") as f:
         json.dump(valid_docs, f, indent=2, ensure_ascii=False)
@@ -626,14 +796,20 @@ if __name__ == "__main__":
         writer.writeheader()
         writer.writerows(report_data)
 
+    # Calculate Stats for Final Print
+    total_input = len(raw_data)
+    total_unique_output = len(valid_docs)
+    total_failures = len([r for r in report_data if r['status'] != 'SUCCESS'])
+    # Math: The missing count is the duplicates that were absorbed/merged
+    total_merged = total_input - total_unique_output - total_failures
+
     print("\n✅ Processing Complete!")
-    print(f"   - Valid Docs: {len(valid_docs)} (Saved to processed_output_updated.json)")
-    print(f"   - Failed/Skipped: {len(raw_data) - len(valid_docs)}")
-    print(f"   - Detailed Logs: pipeline.log")
-    print(f"   - Summary Report: ingestion_report.csv")
-
-
-# In[29]:
+    print(f"   - Total Input:      {total_input}")
+    print(f"   - Unique Success:   {total_unique_output} (Saved to processed_output_updated.json)")
+    print(f"   - Duplicates:       {total_merged} (Merged/Updated)")
+    print(f"   - Failures:         {total_failures} (Sent to Dead Letter Queue)")
+    print(f"   - Detailed Logs:    pipeline.log")
+    print(f"   - Summary Report:   ingestion_report.csv")
 
 
 def execute_transformation_step(input_file: str, output_file: str) -> List[Dict]:
@@ -644,31 +820,21 @@ def execute_transformation_step(input_file: str, output_file: str) -> List[Dict]
     except FileNotFoundError:
         raise FileNotFoundError(f"Input file '{input_file}' not found.")
     
-    valid_docs = []
-    seen_ids = set()
+    valid_docs_map = {}
     
     for doc in raw_data:
-        doc_id = doc.get('_id')
-        if doc_id in seen_ids: 
-            continue
-        if doc_id: 
-            seen_ids.add(doc_id)
-        
-        # FIX: Unpack the tuple (result, report)
         result, report = transformer.process_document(doc)
         
-        # FIX: Check result and append directly (it is already a dict, not a model)
         if result: 
-            valid_docs.append(result)
+            ext_id = result.get('metadata', {}).get('external_id')
+            if ext_id:
+                valid_docs_map[ext_id] = result
     
+    valid_docs = list(valid_docs_map.values())
+
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(valid_docs, f, indent=2, ensure_ascii=False)
     
     return valid_docs
-
-
-# In[ ]:
-
-
 
 
