@@ -15,7 +15,7 @@ from vectordb_v3 import VectorDatabase
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("CapitolPipeline")
 
-app = FastAPI(title="Modular RAG Pipeline (Stateless)")
+app = FastAPI(title="Capitol-AI")
 COLLECTION_NAME = "capitol_assessment"
 
 
