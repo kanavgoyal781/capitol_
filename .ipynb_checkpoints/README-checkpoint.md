@@ -7,6 +7,11 @@ If anything is unclear, breaks, or you’d like to discuss design choices, pleas
 - **Email:** kanavgoyal@uchicago.edu  
 - **Phone:** +1-312-287-2109
 
+This project implements a production-grade data ingestion and semantic search pipeline designed to transform raw, unstructured webhook payloads into a structured, queryable knowledge base. Built on FastAPI, Qdrant, and Docker and deployed on Render, the system automates the full lifecycle of data processing. It enforces strict data contracts using Pydantic for schema validation, cleans HTML content, generates vector embeddings via OpenAI, and indexes them for high-speed semantic retrieval.
+
+Unlike standard ingestion scripts, this pipeline is engineered for fault tolerance and data reliability in distributed environments. It utilizes a defensive "Bouncer Pattern" to validate payloads individually, ensuring that a single malformed record does not crash the entire processing batch. Critical architecture decisions include an idempotent upsert mechanism to handle duplicate webhooks gracefully and a Dead Letter Queue (DLQ) that quarantines failed records for debugging, ensuring "zero data loss" even when upstream data is corrupted.
+
+To maintain operational visibility, the system is instrumented with structured logging and automated telemetry. After every ingestion run, the pipeline generates a health dashboard and CSV audit trail that tracks success rates, failure breakdowns, and root causes (e.g., missing URLs vs. Pydantic validation errors). This approach treats observability as a first-class citizen, allowing engineers to monitor pipeline health in real-time and triage data quality issues immediately.
 
 ---
 
