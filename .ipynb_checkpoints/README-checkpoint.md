@@ -1,7 +1,6 @@
 ## Acknowledgment & Contact
 
 Hi 👋  
-Welcome to my assessment submission. I had a lot of fun working on this and I’m excited to walk you through what I built.
 
 If anything is unclear, breaks, or you’d like to discuss design choices, please feel free to reach out:
 
